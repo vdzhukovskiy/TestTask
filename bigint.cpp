@@ -79,7 +79,7 @@ vector<char> BigInt::getDiff(vector<char> num1, vector<char> num2) {
     if(num1.size() < num2.size()) {
         swap(num1, num2);
     } else {
-        if(num1.size() == num2.size())
+        if(num1.size() == num2.size()) {
             for(unsigned long long i = num1.size(); i >= 1; i--) {
                 if(num1[i - 1] < num2[i - 1]) {
                     swap(num1, num2);
@@ -89,6 +89,7 @@ vector<char> BigInt::getDiff(vector<char> num1, vector<char> num2) {
                     break;
                 }
             }
+        }
     }
     bool shift_digit = false;
     char digit;
